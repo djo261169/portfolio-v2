@@ -1,0 +1,54 @@
+﻿@model IEnumerable<v2.Models.Project>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Dodaj svoj projekat u portfolio", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <h4>KLASA</h4>
+        </th>
+        <th>
+            <h4>NAZIV PROJEKTA</h4>
+        </th>
+        <th>
+            <h4>THUMBNAIL</h4>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                <img src="/Content/@Url.Content(item.URL)" class="img-thumbnail" style="max-height: 40px;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Story)
+            </td>
+            <td>
+                @Html.ActionLink("Uredi", "Edit", new { id = item.ProjectID }) |
+                @Html.ActionLink("Detalji", "Details", new { id = item.ProjectID }) |
+                @Html.ActionLink("Izbriši", "Delete", new { id = item.ProjectID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="row">
+    <h2>Departments</h2>
+    <p>@Html.ActionLink("List of Departments", "Index", "Departments")</p>
+</div>
