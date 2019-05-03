@@ -10,9 +10,12 @@
 </head>
 <body>
     <div class="Menu-Button">
-        <img src="~/Media/animation-zoom.gif" height="30" width="30" />
+        <img src="~/Content/giphy.gif" height="50" width="50" />
     </div>
-    @Html.ActionLink("v2", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+        @Html.Partial("_LoginPartial")
+
+
     <div class="Menu">
         <ul>
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -20,7 +23,6 @@
             <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
         </ul>
-        @Html.Partial("_LoginPartial")
     </div>
 
 

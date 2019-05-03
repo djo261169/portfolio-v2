@@ -1,7 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: black;
+    background-color: #082535;
+    color:white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,12 +22,14 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    
+}
+video {
+    max-width: 480px;
 }
 
 header {
     position: relative;
-    background-color: black;
     height: 75vh;
     min-height: 25rem;
     width: 100%;
@@ -50,24 +53,30 @@ header {
 
     header .container {
         position: relative;
-        top: 4vw;
-        left: 7vw;
+        top: 16vw;
+        left: 5vw;
         z-index: 2;
     }
 
     header .overlay {
         position: absolute;
-        top: 50%;
-        left: 20%;
-        height: 100%;
+        top: 16vw;
+        left: 5vw;
+        height: 10vw;
         width: 100%;
         background-color: black;
-        opacity: 0.5;
+        opacity: 0.75;
+        border: 8px solid #082535;
         z-index: 1;
     }
 
-
-
+.fixed-bottom {
+    border: 8px solid transparent;
+    background-color: rgba(2, 13, 32, 0.6);
+    box-shadow: #082535 -5px 5px 10px;
+    border-radius: 0.25rem;
+    left: 85%;
+}
 
 .Menu-Button {
     height: 30px;
@@ -75,7 +84,6 @@ header {
     left: 15px;
     top: 15px;
     position: fixed;
-    background-color: cornflowerblue;
     background-size: contain;
     -webkit-transition: cubic-bezier(.34,.43,0,1.02) 0.5s;
     -moz-transition: cubic-bezier(.34,.43,0,1.02) 0.5s;
@@ -113,7 +121,6 @@ header {
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     transform: translateX(100%);
-    background-color: cornflowerblue;
     -webkit-transition: cubic-bezier(.34,.43,0,1.02) 0.5s;
     -moz-transition: cubic-bezier(.34,.43,0,1.02) 0.5s;
     transition: cubic-bezier(.34,.43,0,1.02) 0.5s;
@@ -158,7 +165,7 @@ header {
             }
 
             .Menu ul li:hover {
-                background: rgba(202, 139, 209, 0.6);
+                background: #212529;
             }
 
                 .Menu ul li:hover a {

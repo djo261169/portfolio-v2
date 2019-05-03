@@ -47,9 +47,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -180,16 +177,25 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="DefaultConnectionMigrations\201904032047245_InitialCreate.cs" />
+    <Compile Include="DefaultConnectionMigrations\201904032047245_InitialCreate.Designer.cs">
+      <DependentUpon>201904032047245_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultConnectionMigrations\201904301701590_Initial.cs" />
+    <Compile Include="DefaultConnectionMigrations\201904301701590_Initial.Designer.cs">
+      <DependentUpon>201904301701590_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultConnectionMigrations\201905011103470_rev1.cs" />
+    <Compile Include="DefaultConnectionMigrations\201905011103470_rev1.Designer.cs">
+      <DependentUpon>201905011103470_rev1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultConnectionMigrations\ConfigurationOne.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201904031725457_InitialCreate.cs" />
     <Compile Include="Migrations\201904031725457_InitialCreate.Designer.cs">
       <DependentUpon>201904031725457_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904032047245_InitialCreate.cs" />
-    <Compile Include="Migrations\201904032047245_InitialCreate.Designer.cs">
-      <DependentUpon>201904032047245_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201904171809076_initial.cs" />
     <Compile Include="Migrations\201904171809076_initial.Designer.cs">
@@ -211,35 +217,11 @@
     <Compile Include="Migrations\201904221757390_seed.Designer.cs">
       <DependentUpon>201904221757390_seed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904231625559_tblcleanup.cs" />
-    <Compile Include="Migrations\201904231625559_tblcleanup.Designer.cs">
-      <DependentUpon>201904231625559_tblcleanup.cs</DependentUpon>
+    <Compile Include="Migrations\201904301711117_table.cs" />
+    <Compile Include="Migrations\201904301711117_table.Designer.cs">
+      <DependentUpon>201904301711117_table.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904241816588_db.cs" />
-    <Compile Include="Migrations\201904241816588_db.Designer.cs">
-      <DependentUpon>201904241816588_db.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904251809124_dep01.cs" />
-    <Compile Include="Migrations\201904251809124_dep01.Designer.cs">
-      <DependentUpon>201904251809124_dep01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904251843171_revert.cs" />
-    <Compile Include="Migrations\201904251843171_revert.Designer.cs">
-      <DependentUpon>201904251843171_revert.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904251924254_dep02.cs" />
-    <Compile Include="Migrations\201904251924254_dep02.Designer.cs">
-      <DependentUpon>201904251924254_dep02.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904291644320_login.cs" />
-    <Compile Include="Migrations\201904291644320_login.Designer.cs">
-      <DependentUpon>201904291644320_login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904291648189_loginfullname.cs" />
-    <Compile Include="Migrations\201904291648189_loginfullname.Designer.cs">
-      <DependentUpon>201904291648189_loginfullname.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Configurationtwo.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\EmailFormModel.cs" />
@@ -251,14 +233,30 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\2060215b-arrow_01z01z01z01z000000.gif" />
     <Content Include="Content\animtrap.css" />
     <Content Include="Content\animtrap.min.css" />
+    <Content Include="Content\arrow-down.gif" />
+    <Content Include="Content\bacb74b173ca7b5fade0c7879b900c11.gif" />
+    <Content Include="Content\blackdownarrow.gif" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\default-5bfffe378b99cae437c734ffefbb67b7b2a97c2e750c4b20a59b28955ab0d1ac.png" />
+    <Content Include="Content\desktop-09b80587ec1421e3631e3ba5304030f6924199e46e477f7ef8cd07df8271d560.png" />
+    <Content Include="Content\drone-work-bc4b3d22413e5b04a2d454c845c6565375fc25b5a459662621d7eda45ccc9007.png" />
+    <Content Include="Content\giphy.gif" />
+    <Content Include="Content\hamanim.gif" />
+    <Content Include="Content\How will Artificial Intelligence and Internet of Things change the world.mp4" />
+    <Content Include="Content\Internet of Things %28IoT%29  What is IoT  How it Works  IoT Explained  Edureka.mp4" />
+    <Content Include="Content\lamp.gif" />
+    <Content Include="Content\mumet_thumb.gif" />
+    <Content Include="Content\rotating-loader-arrow-3.gif" />
+    <Content Include="Content\rotating-loader-arrow.gif" />
+    <Content Include="Content\scroll-down.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -383,11 +381,17 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DefaultConnectionMigrations\201904032047245_InitialCreate.resx">
+      <DependentUpon>201904032047245_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultConnectionMigrations\201904301701590_Initial.resx">
+      <DependentUpon>201904301701590_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultConnectionMigrations\201905011103470_rev1.resx">
+      <DependentUpon>201905011103470_rev1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904031725457_InitialCreate.resx">
       <DependentUpon>201904031725457_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904032047245_InitialCreate.resx">
-      <DependentUpon>201904032047245_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904171809076_initial.resx">
       <DependentUpon>201904171809076_initial.cs</DependentUpon>
@@ -404,26 +408,8 @@
     <EmbeddedResource Include="Migrations\201904221757390_seed.resx">
       <DependentUpon>201904221757390_seed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904231625559_tblcleanup.resx">
-      <DependentUpon>201904231625559_tblcleanup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904241816588_db.resx">
-      <DependentUpon>201904241816588_db.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904251809124_dep01.resx">
-      <DependentUpon>201904251809124_dep01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904251843171_revert.resx">
-      <DependentUpon>201904251843171_revert.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904251924254_dep02.resx">
-      <DependentUpon>201904251924254_dep02.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904291644320_login.resx">
-      <DependentUpon>201904291644320_login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904291648189_loginfullname.resx">
-      <DependentUpon>201904291648189_loginfullname.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904301711117_table.resx">
+      <DependentUpon>201904301711117_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

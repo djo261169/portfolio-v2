@@ -10,6 +10,13 @@
     <h4>Project</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.DepartmentName)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Title)
@@ -35,5 +42,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ProjectID }) |
-    @Html.ActionLink("Home", "Index", "Home")
+    @Html.ActionLink("Back to List", "Index")
 </p>
