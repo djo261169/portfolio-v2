@@ -29,7 +29,7 @@ namespace v2
                       "~/Content/animtrap.css",
                       "~/Content/site.css"));
 
-            // BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
