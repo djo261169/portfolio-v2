@@ -221,6 +221,10 @@
     <Compile Include="Migrations\201904301711117_table.Designer.cs">
       <DependentUpon>201904301711117_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905051849022_upt_seed.cs" />
+    <Compile Include="Migrations\201905051849022_upt_seed.Designer.cs">
+      <DependentUpon>201905051849022_upt_seed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configurationtwo.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Department.cs" />
@@ -410,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904301711117_table.resx">
       <DependentUpon>201904301711117_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905051849022_upt_seed.resx">
+      <DependentUpon>201905051849022_upt_seed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -25,61 +25,41 @@
     <p class="text-center">@Html.ActionLink("customize or add your stunning solutions to the portfolio...", "Index", "Projects")</p>
 </div>
 
-<div id="demo" class="carousel slide" data-ride="carousel">
-    <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-    </ul>
-    <div class="carousel-inner" role="listbox">
-        @{int i = 0;}
-        @using (var ctx = new ProjectDBContext())
-        {
-            foreach (var project in ctx.Projects)
-            {
-                i++;
-                var active = i == 1 ? "active" : "";
-                <div class="carousel-item @active">
-                    <img alt="@project.Title" src="/Content/@Url.Content(project.URL)" class="slideimg img-fluid" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>@project.Title</h5>
-                        <p>@project.Story</p>
-                    </div>
-                </div>
-            }
-        }
-    </div>
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-</div>
-
-<div class="row-fluid">
-
-        @using (var ctx = new ProjectDBContext())
-        {
-            foreach (var project in ctx.Projects)
-            {
-                <a href="@Url.Action("Details", "Projects", new { @id=project.ProjectID})">
-                    <div class="anim-hover-grow" style="padding: 10px">
-                        <div class="col-sm-6 col-md-2">
-                            <div class="card">
-                                <img class="card-img-top" alt="@project.Title" src="/Content/@Url.Content(project.URL)">
-                                <div class="card-body">
-                                    <h5 class="card-title">@project.Title</h5>
-                                </div>
+<div class="row">
+    <div class="col-md-6 col-sm-10">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                @{int i = 0;}
+                @using (var ctx = new ProjectDBContext())
+                {
+                    foreach (var project in ctx.Projects)
+                    {
+                        i++;
+                        var active = i == 1 ? "active" : "";
+                        <div class="carousel-item @active">
+                            <img alt="@project.Title" src="/Content/@Url.Content(project.URL)" class="slideimg img-fluid" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>@project.Title</h5>
                             </div>
                         </div>
-                    </div>
-                </a>
-            }
-        }
-
+                    }
+                }
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-10" style="text-transform: uppercase; text-align: justify;">
+        <h4>
+            beginners and professionals can learn and share how to build robotics, industrial automation systems, AI-powered machines, and everything in between. By bringing together innovators and hundreds of technology partners around the globe, Hackster hopes to facilitate the creation of solutions that make today's world a smarter, healthier place and support the livelihood of tomorrow's generation
+        </h4>
+    </div>
 </div>
-<div id="divimage" class="modal">
-    <img class="modal-content" id="modalimg">
-    <div id="caption"></div>
-</div>
+    <div id="divimage" class="modal">
+        <img class="modal-content" id="modalimg">
+        <div id="caption"></div>
+    </div>

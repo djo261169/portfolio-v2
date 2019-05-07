@@ -244,3 +244,4 @@ C:\Users\kuzma\Desktop\v2\v2\obj\Debug\v2.DefaultConnectionMigrations.InitialCre
 C:\Users\kuzma\Desktop\v2\v2\obj\Debug\v2.DefaultConnectionMigrations.Initial.resources
 C:\Users\kuzma\Desktop\v2\v2\obj\Debug\v2.Migrations.table.resources
 C:\Users\kuzma\Desktop\v2\v2\obj\Debug\v2.DefaultConnectionMigrations.rev1.resources
+C:\Users\kuzma\Desktop\v2\v2\obj\Debug\v2.Migrations.upt_seed.resources

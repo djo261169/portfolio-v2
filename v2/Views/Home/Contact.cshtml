@@ -6,29 +6,29 @@
 <h3>@ViewBag.Message</h3>
 
 <div class="row" style="padding: 3%;">
-    <div class="col-md-4">
+    <div class="col-md-6">
 
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
-            <h4>Send your comments.</h4>
+            <h4>Send your comments...</h4>
             <hr />
             <div class="form-group">
-                @Html.LabelFor(m => m.FromName, new { @class = "col-md-2 control-label" })
+                @Html.LabelFor(m => m.FromName, new { @class = "col-md-8 control-label" })
                 <div class="col-md-10">
                     @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.FromName)
                 </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.FromEmail, new { @class = "col-md-2 control-label" })
+                @Html.LabelFor(m => m.FromEmail, new { @class = "col-md-8 control-label" })
                 <div class="col-md-10">
                     @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.FromEmail)
                 </div>
             </div>
             <div class="form-group">
-                @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
+                @Html.LabelFor(m => m.Message, new { @class = "col-md-8 control-label" })
                 <div class="col-md-10">
                     @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.Message)
@@ -41,8 +41,11 @@
             </div>
         }
     </div>
-    <div class="col-md-8 ">
-        <img src="~/Content/desktop-09b80587ec1421e3631e3ba5304030f6924199e46e477f7ef8cd07df8271d560.png" />
+    <div class="col-md-6 ">
+        <img class="img-fluid" src="~/Content/drone-work-bc4b3d22413e5b04a2d454c845c6565375fc25b5a459662621d7eda45ccc9007.png" />
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="border: 3px solid white;">
+            <source src="~/Content/Internet%20of%20Things%20(IoT)%20%20What%20is%20IoT%20%20How%20it%20Works%20%20IoT%20Explained%20%20Edureka.mp4" type="video/mp4" />
+        </video>
     </div>
 </div>
 

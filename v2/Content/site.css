@@ -24,6 +24,29 @@ select,
 textarea {
     
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #17a2b8;
+    border-radius: 10px;
+    height: 10px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #20c997;
+    }
+
 video {
     max-width: 480px;
 }
@@ -188,6 +211,10 @@ body {
     background-position: bottom;
 }
 
+#demo {
+    height: 20rem;
+}
+
 #Container {
     margin-top: 0;
     left: 0px;
@@ -201,8 +228,26 @@ body {
     margin: 0 0 0 0;
 }
 
+.jumbotron-fluid {
+    text-transform: uppercase;
+    font-size: 4vw;
+    margin-bottom: 5rem;
+}
+    .jumbotron-fluid:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-transition: ease-in 0.2s;
+        -moz-transition: ease-in 0.2s;
+        transition: ease-in 0.2s;
+        text-decoration: none;
+    }
+
+textarea {
+    width: 100%;
+    height: 10rem;
+}
+
 .card {
-color: black;
+    color: black;
 }
 
 .card-img-top {

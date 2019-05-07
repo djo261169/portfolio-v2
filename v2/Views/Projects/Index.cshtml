@@ -24,9 +24,11 @@
                         <li class="list-group-item">@Html.DisplayFor(modelItem => item.Department.DepartmentName)</li>
                     </ul>
                     <div class="card-body">
-                        <a href="#" class="card-link">@Html.ActionLink("Edit", "Edit", new { id = item.ProjectID })</a>
-                        <a href="#" class="card-link">@Html.ActionLink("Details", "Details", new { id = item.ProjectID })</a>
-                        <a href="#" class="card-link">@Html.ActionLink("Delete", "Delete", new { id = item.ProjectID })</a>
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-outline-primary">@Html.ActionLink("Edit", "Edit", new { id = item.ProjectID })</button>
+                            <button class="btn btn-outline-primary">@Html.ActionLink("Details", "Details", new { id = item.ProjectID })</button>
+                            <button class="btn btn-outline-primary">@Html.ActionLink("Delete", "Delete", new { id = item.ProjectID })</button>
+                        </div>
                     </div>
                 </div>
             </div>
